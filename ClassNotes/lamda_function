@@ -1,0 +1,96 @@
+# find maximum of 3 numbers
+
+# def find_max_of_three_number(a,b,c):
+#     max_number = a
+#     if b > a:
+#         max_number = b
+#     if c > max_number:
+#         max_number = c
+#     return max_number
+
+# print(find_max_of_three_number(8,6,9))
+
+# using lambda function
+
+# max_num = lambda x,y,z : x if (x>z) else z if (x>y) else y if (y>z) else z
+# print(max_num(8,22,9))
+
+# map function
+
+# list_fruits = ["apple", "banana", "kiwi"]
+
+# up_list = list(map(lambda fruit : fruit.title(),list_fruits))
+# up_list = list(map(lambda fruit : fruit[0]=='K',list_fruits))
+# print(up_list)
+
+# filter function
+
+# filter_new_list = list(filter(lambda fruit : fruit[0] == 'K',up_list))
+# print(filter_new_list)
+
+# to do.....
+# if we have a list of numbers and then we want to select even numbers from it. 
+# Then from that new list we want to square it. After that add the squared numbers. 
+
+# Reduce Function
+
+from functools import reduce
+
+# numbers_list = [10,12,14,16]
+
+# def sum_of_numbers(x,y):
+#     return x+y
+
+# reduce_function = reduce(sum_of_numbers,numbers_list)
+# print(reduce_function)
+
+
+'''
+Write a filter function to print all the palindromes in the given list.
+myStrings = ("demigod", "rewire", "madam", "fortran", "python", "xamarin", "salas", "PHP")
+'''
+
+myStrings = ("demigod", "rewire", "madam", "fortran", "python", "xamarin", "salas", "PHP")
+
+# for string in myStrings:
+#     if string[::]==string[::-1]:
+#         print(string)
+
+
+
+# using filter function
+        
+# filter_list = list(filter(lambda string1 : string1==string1[::-1],myStrings))  
+# print(filter_list)      
+
+# filter_new_list = list(filter(lambda fruit : fruit[0] == 'K',up_list))
+# print(filter_new_list)
+
+'''
+• Write a Python program to print length of all the items of a list
+• Input:
+x = ['ab', ‘cd’, ‘a’]
+• Output:
+[2, 2, 1]
+'''
+# x = ['ab', 'cd', 'a']
+
+# def get_length(some_input):
+#     return len(some_input)
+
+# filter_list = list(map(get_length,x))
+# print(filter_list)
+
+# len_list = list(map(lambda a : len(a),x))
+# print(len_list)
+
+# Concatenate a list of strings with a separator using reduce()
+
+# words = ["apple", "banana", "orange", "kiwi"]
+# output = "apple, banana, orange, kiwi"
+
+words = ["apple", "banana", "orange", "kiwi"]
+
+reduce_word_list = reduce(lambda x,y : x + ", " + y, words)
+print(reduce_word_list)
+    
